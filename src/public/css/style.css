@@ -1,0 +1,82 @@
+/*---------------------------------- list users---------------------------------*/
+
+html,
+body,
+.intro {
+    height: 100%;
+}
+.container {
+    max-width: 1800px !important;
+}
+table td,
+table th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    min-width: 100px;
+    max-width: 200px;
+}
+
+tbody td {
+    font-weight: 500;
+    color: #999999;
+}
+
+/*----------------------------------end list users---------------------------------*/
+/*----------------------------------register form---------------------------------*/
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+.card-registration .select-arrow {
+    top: 13px;
+}
+/*----------------------------------end register form---------------------------------*/
+
+/*----------------------------------login form---------------------------------*/
+.divider:after,
+.divider:before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.h-custom {
+    height: calc(100% - 73px);
+    max-width: 70%;
+}
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+/*----------------------------------end login form---------------------------------*/
+
+/*---------------------------------- profile form---------------------------------*/
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+}
+
+/*----------------------------------end profile form---------------------------------*/

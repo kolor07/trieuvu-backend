@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <title>Edit User</title>
+    </head>
+    <body>
+        <section class="vh-100 gradient-custom">
+            <div class="container py-5 h-100">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-12 col-lg-9 col-xl-7">
+                        <div class="card shadow-2-strong card-registration" style="border-radius: 15px">
+                            <div class="card-body p-4 p-md-5">
+                                <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Edit Form</h3>
+                                <form method="post" action="/edit-user">
+                                    <% if(errorMessage){ %>
+                                    <span class="error text-danger">error message : <br /><%= errorMessage %></span>
+                                    <br />
+                                    <br />
+                                    <%}%>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input
+                                                    type="text"
+                                                    id="firstName"
+                                                    class="form-control form-control-lg"
+                                                    name="firstName"
+                                                    value="<%= dataInput.firstName %>"
+                                                />
+                                                <label class="form-label" for="firstName">First Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input
+                                                    type="text"
+                                                    id="lastName"
+                                                    class="form-control form-control-lg"
+                                                    name="lastName"
+                                                    value="<%= dataInput.lastName %>"
+                                                />
+                                                <label class="form-label" for="lastName">Last Name </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4 d-flex align-items-center">
+                                            <div class="form-outline datepicker w-100">
+                                                <input
+                                                    type="text"
+                                                    class="form-control form-control-lg"
+                                                    id="address"
+                                                    name="address"
+                                                    value="<%= dataInput.address %>"
+                                                />
+                                                <label for="address" class="form-label">Address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div class="form-outline">
+                                                <input
+                                                    type="text"
+                                                    id="phoneNumber"
+                                                    class="form-control form-control-lg"
+                                                    name="phoneNumber"
+                                                    value="<%= dataInput.phoneNumber %>"
+                                                />
+                                                <label class="form-label" for="lastName">Phone Number </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <h6 class="mb-2 pb-1">Gender:</h6>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                id="femaleGender" value="1" <% if(dataInput.gender ==1 ||
+                                                !dataInput.gender){ %> checked <% } %> />
+                                                <label class="form-check-label" for="femaleGender">Female</label>
+                                            </div>
+
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="gender"
+                                                id="maleGender" value="2" <% if(dataInput.gender ==2 ){ %> checked <% }
+                                                %> />
+                                                <label class="form-check-label" for="maleGender">Male</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 pt-2">
+                                        <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        id="id"
+                                        class="form-control form-control-lg"
+                                        name="id"
+                                        value="<%= dataInput.id %>"
+                                        hidden
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
