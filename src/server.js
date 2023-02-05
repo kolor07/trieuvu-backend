@@ -7,7 +7,7 @@ import configViewEngine from './config/viewEngineConfig';
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 1200;
+const port = process.env.PORT || 12000;
 console.log(port);
 // parse
 app.use(express.urlencoded({ extended: true }));
