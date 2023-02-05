@@ -5,8 +5,8 @@
   "main": "server.js",  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "nodemon --exec babel-node ./src/server.js",
-    "start": "nodemon --exec babel-node ./src/server.js"
+    "build": "babel src -d dist"",
+    "start": "node ./src/server.js"
   },
   "engines": {
    "node": ">=18 <18.13"
