@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
-import * as userService from '../services/UserService';
-import * as refreshTokenService from '../services/RefreshTokenService';
+import * as userService from '../services/userService';
+import * as refreshTokenService from '../services/refreshTokenService';
 
 export const signIn = async (req, res) => {
     const { email, password } = req.body;
