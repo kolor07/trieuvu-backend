@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import authConfig from '../config/authConfig';
 
 import db from '../models/index';
-import * as refreshTokenService from '../services/RefreshTokenService';
+import * as refreshTokenService from '../services/refreshTokenService';
 
 const salt = bcrypt.genSaltSync(10);
 
