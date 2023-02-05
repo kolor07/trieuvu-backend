@@ -16,10 +16,12 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "sql12595321",
+    "password": "slIgdj3ui2",
+    "database": "sql12595321",
+    "host": "sql12.freesqldatabase.com",
+    "port":"3306",
+    "dialect": "mysql",
+    "logging": false
   }
 }
